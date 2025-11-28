@@ -1,0 +1,1 @@
+import React from 'react'; export default function Ranking(){return <div className='card'>Ranking</div>}

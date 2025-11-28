@@ -1,0 +1,1 @@
+import React from 'react'; export default function Bonus(){return <div className='card'>Bonus</div>}
