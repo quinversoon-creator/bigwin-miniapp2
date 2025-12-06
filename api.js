@@ -20,11 +20,10 @@ export default {
   getProfile: (userId) =>
     call(`/user/profile${userId ? `?user_id=${encodeURIComponent(userId)}` : ""}`),
 
-  claimBonus: (userId) =>
-    call(`/user/bonus`, {
-      method: "POST",
-      body: JSON.stringify({ user_id: userId })
-    }),
+ claimBonus: (id) => call(`/user/bonus`, {
+  method: "POST",
+  body: JSON.stringify({ user_id: String(id) })
+})
 
   getRanking: () => call(`/ranking`),
 
